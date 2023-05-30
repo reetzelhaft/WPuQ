@@ -998,7 +998,7 @@ class WPuQPlots():
         transformer[transformer < 0] = 0
         # get district heating data
         try:
-            source_file = 'dh_grid.hdf5'
+            source_file = 'district_heating_grid.hdf5'
             dset_name = 'DH_GRID/IN/HEAT_TEMPERATURE_FLOW'
             dh = pd.read_hdf(os.path.join(folder, source_file), dset_name)
         except FileNotFoundError:

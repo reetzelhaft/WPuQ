@@ -208,8 +208,8 @@ class ElecSlp:
         selp_series['tmd'] = selp_series['tmd'].astype(float)
         # get temperatures
         file_path = os.path.join(
-            Path(os.path.dirname(__file__)).parent, f'Ohrberg_{self.year}',
-            'WEATHER_STATION_1.hdf5')
+            Path(os.path.dirname(__file__)).parent, f'WPuQ/Ohrberg_{self.year}/resampled',
+            'weather.hdf5')
         dset_name = 'WEATHER_SERVICE/IN/WEATHER_TEMPERATURE_TOTAL'
         weather = pd.read_hdf(file_path, dset_name)
         weather = weather.resample('15min').mean()
